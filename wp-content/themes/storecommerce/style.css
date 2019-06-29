@@ -5123,6 +5123,16 @@ body .select2-container .select2-selection--single{
 
 
 /*media query======================*/
+
+@media (min-width: 768px) {
+	.form-inline .form-group.style-3-search.custom {
+		display: inline-flex;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+}
+
+
 @media screen and (max-width: 1024px){
 	.style-3-search .search-field {
 		width: 40%;

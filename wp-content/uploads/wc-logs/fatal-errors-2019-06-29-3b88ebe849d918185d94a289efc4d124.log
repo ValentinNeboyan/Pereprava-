@@ -1,0 +1,18 @@
+2019-06-29T10:51:48+00:00 CRITICAL Call to undefined function custom_storecommerce_product_search_form() в /home/pereprav/pereprava.plus/www/wp-content/themes/storecommerce/inc/blocks/block-header.php на строке 47
+
+2019-06-29T10:51:49+00:00 CRITICAL Call to undefined function custom_storecommerce_product_search_form() в /home/pereprav/pereprava.plus/www/wp-content/themes/storecommerce/inc/blocks/block-header.php на строке 47
+
+2019-06-29T11:35:34+00:00 CRITICAL Object of class WP_Term could not be converted to string в /home/pereprav/pereprava.plus/www/wp-includes/formatting.php на строке 1045
+
+2019-06-29T11:35:35+00:00 CRITICAL Object of class WP_Term could not be converted to string в /home/pereprav/pereprava.plus/www/wp-includes/formatting.php на строке 1045
+
+2019-06-29T11:36:21+00:00 CRITICAL Object of class WP_Term could not be converted to string в /home/pereprav/pereprava.plus/www/wp-includes/formatting.php на строке 1045
+
+2019-06-29T11:36:23+00:00 CRITICAL Object of class WP_Term could not be converted to string в /home/pereprav/pereprava.plus/www/wp-includes/formatting.php на строке 1045
+
+2019-06-29T11:37:49+00:00 CRITICAL Object of class WP_Term could not be converted to string в /home/pereprav/pereprava.plus/www/wp-includes/formatting.php на строке 1045
+
+2019-06-29T11:37:50+00:00 CRITICAL Object of class WP_Term could not be converted to string в /home/pereprav/pereprava.plus/www/wp-includes/formatting.php на строке 1045
+
+2019-06-29T13:29:28+00:00 CRITICAL Object of class WP_Query could not be converted to string в /home/pereprav/pereprava.plus/www/wp-content/plugins/woocommerce/includes/wc-template-functions.php на строке 1063
+

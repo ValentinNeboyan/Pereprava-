@@ -573,3 +573,99 @@ if (!function_exists('storecommerce_product_search_form')) :
     }
 endif;
 
+if (!function_exists('custom_storecommerce_product_search_form')) :
+    /**
+     * Display Product search form with categories
+     *
+     * @since 1.0.0
+     *
+     * @return void
+     */
+    function custom_storecommerce_product_search_form()
+    {
+        ?>
+        <form role="search" method="get" class="form-inline woocommerce-product-search"
+              action="<?php echo esc_url(home_url('/')); ?>">
+
+            <div class="form-group style-3-search custom">
+                <?php
+
+                define('CITY_CATEGORY_ID', 25);
+
+                $product_cats_cities = get_terms(array(
+                    'taxonomy' => 'product_cat',
+                    'child_of' => CITY_CATEGORY_ID,
+                    'hide_empty' => true,
+                ));
+
+                $excludeIds = CITY_CATEGORY_ID.', ';
+
+                foreach ($product_cats_cities as $city) {
+                    $excludeIds .= $city->term_id.', ';
+                }
+
+                $product_cats = get_terms(array(
+                    'taxonomy' => 'product_cat',
+                    'exclude' => $excludeIds,
+                    'hide_empty' => true,
+                ));
+
+                $search_placeholder = storecommerce_get_option('store_product_search_placeholder');
+                $cat_placeholder = storecommerce_get_option('store_product_search_category_placeholder');
+                $cat_cities = get_term(CITY_CATEGORY_ID);
+
+                $search_autocomplete_class = '';
+                $search_autocomplete = storecommerce_get_option('store_product_search_autocomplete');
+                if($search_autocomplete == 'yes'){
+                    $search_autocomplete_class = ' search-autocomplete';
+                }
+
+                ?>
+                <input type="search" id="woocommerce-product-search-field" class="search-field<?php echo esc_attr($search_autocomplete_class) ?>"
+                       placeholder="<?php echo esc_attr($search_placeholder); ?>"
+                       value="<?php echo get_search_query(); ?>" name="s"/>
+                <?php
+
+                if (!empty($product_cats) && !is_wp_error($product_cats)):
+                    $selected_product_cat = get_query_var('product_cat');
+                    $selected_product_cat_city = get_query_var('product_cat_city');
+                    ?>
+                    <select name="product_cat" class="cate-dropdown">
+                        <option value=""><?php echo '&mdash; '. esc_attr($cat_placeholder) .' &mdash;'; ?></option>
+                        <?php
+                        foreach ($product_cats as $product_cat) {
+                            ?>
+                            <option value="<?php echo esc_attr($product_cat->slug) ?>" <?php selected($product_cat->slug, $selected_product_cat) ?>><?php echo esc_html($product_cat->name); ?></option>
+
+                            <?php
+                        }
+                        ?>
+                    </select>
+
+                    <select name="product_cat" class="cate-dropdown">
+                        <option value=""><?php echo '&mdash; '. esc_attr($cat_cities->name) .' &mdash;'; ?></option>
+                        <?php
+                        foreach ($product_cats_cities as $product_cat) {
+                            ?>
+                            <option value="<?php echo esc_attr($product_cat->slug) ?>" <?php selected($product_cat->slug, $selected_product_cat_city) ?>><?php echo esc_html($product_cat->name); ?></option>
+
+                            <?php
+                        }
+                        ?>
+                    </select>
+                <?php endif; ?>
+
+                <label class="screen-reader-text"
+                       for="woocommerce-product-search-field"><?php esc_html_e('Search for:', 'storecommerce'); ?></label>
+
+                <button type="submit" value=""><i class="fa fa-search" aria-hidden="true"></i></button>
+                <input type="hidden" name="post_type" value="product"/>
+
+            </div>
+
+
+        </form>
+        <?php
+    }
+endif;
+
