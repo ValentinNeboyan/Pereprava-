@@ -116,6 +116,15 @@ if (empty($product) || !$product->is_visible()) {
                     <?php the_title(); ?>
                 </a>
             </h4>
+           <?php if (  $product_attributes= $product->get_attributes() ) { ?>
+
+                <?php foreach ( $product_attributes as $product_attribute_key => $product_attribute ) : ?>
+
+                   <span><?php if (wp_kses_post( $product_attribute['name']) == 'Вместительность') echo wp_kses_post( $product_attribute['value'] ); ?></span>
+
+                <?php endforeach; ?>
+
+            <? }?>
             <span class="price">
   									<?php do_action('storecommerce_woocommerce_after_shop_loop_item_title'); ?>
   								</span>

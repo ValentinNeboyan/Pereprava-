@@ -16,3 +16,7 @@
 
 2019-06-29T13:29:28+00:00 CRITICAL Object of class WP_Query could not be converted to string в /home/pereprav/pereprava.plus/www/wp-content/plugins/woocommerce/includes/wc-template-functions.php на строке 1063
 
+2019-06-29T16:22:32+00:00 CRITICAL Call to undefined method WC_Product_Simple::get_available_variations() в /home/pereprav/pereprava.plus/www/wp-content/themes/storecommerce/woocommerce/content-product.php на строке 119
+
+2019-06-29T16:26:19+00:00 CRITICAL Object of class WC_Product_Attribute could not be converted to string в /home/pereprav/pereprava.plus/www/wp-includes/kses.php на строке 1334
+
