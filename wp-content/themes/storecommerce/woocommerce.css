@@ -43,7 +43,8 @@ nav.woocommerce-breadcrumb {
 }
 .woocommerce .woocommerce-breadcrumb a,
 .woocommerce-breadcrumb a {
-	color: #777;
+	color: #63CFD4;
+	/*color: #777;*/
 }
 
 .site-content{
@@ -871,6 +872,15 @@ p.demo_store a:hover{
 	box-sizing: border-box;
 }
 
+@media only screen and (max-width: 900px) {
+	.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+		width: 30px;
+		height: 30px;
+		border-radius: 20px;
+		top: -16px;
+	}
+}
+
 
 
 .widget_price_filter .ui-slider .ui-slider-handle:hover, .widget_price_filter .ui-slider .ui-slider-handle.ui-state-active {
@@ -880,7 +890,17 @@ p.demo_store a:hover{
 	border-radius: 1em;
 	background-color: #b9babc;
 	border: 0;
+	margin-bottom: 10px;
 }
+
+@media screen and (max-width: 900px) {
+	.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
+
+		margin-bottom: 50px;
+	}
+}
+
+
 .woocommerce .widget_price_filter .ui-slider .ui-slider-range {
 	position: absolute;
 	z-index: 1;
@@ -1668,6 +1688,7 @@ body.woocommerce-cart .top-cart-content.primary-bgcolor{
 }
 .product-wrapper ul.product-item-meta.verticle .yith-btn .yith-wcwl-add-to-wishlist a::before {
 	content: "\f004";
+	border-radius: 20px;
 }
 .product-wrapper ul.product-item-meta.verticle .yith-btn a.yith-wcqv-button::before {
 	content: "\f06e";

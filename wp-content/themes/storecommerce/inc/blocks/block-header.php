@@ -44,7 +44,7 @@
                     </div><!-- .site-branding -->
                 </div>
                 <div class="search">
-                    <?php storecommerce_product_search_form(); ?>
+                    <?php custom_storecommerce_product_search_form(); ?>
                 </div>
                 <?php if (class_exists('WooCommerce')): ?>
                 <div class="account-user">
@@ -114,7 +114,7 @@
                         <div id="myOverlay" class="overlay">
                             <span class="close-serach-form" title="Close Overlay">x</span>
                             <div class="overlay-content">
-                                <?php storecommerce_product_search_form(); ?>
+                                <?php custom_storecommerce_product_search_form(); ?>
                             </div>
                         </div>
                         <button class="open-search-form"><i class="fa fa-search"></i></button>

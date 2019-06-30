@@ -630,17 +630,17 @@ if (!function_exists('custom_storecommerce_product_search_form')) :
                     $selected_product_cat = get_query_var('product_cat');
                     $selected_product_cat_city = get_query_var('product_cat_city');
                     ?>
-                    <select name="product_cat" class="cate-dropdown">
-                        <option value=""><?php echo '&mdash; '. esc_attr($cat_placeholder) .' &mdash;'; ?></option>
-                        <?php
-                        foreach ($product_cats as $product_cat) {
-                            ?>
-                            <option value="<?php echo esc_attr($product_cat->slug) ?>" <?php selected($product_cat->slug, $selected_product_cat) ?>><?php echo esc_html($product_cat->name); ?></option>
-
-                            <?php
-                        }
-                        ?>
-                    </select>
+<!--                    <select name="product_cat" class="cate-dropdown">-->
+<!--                        <option value="">--><?php //echo '&mdash; '. esc_attr($cat_placeholder) .' &mdash;'; ?><!--</option>-->
+<!--                        --><?php
+//                        foreach ($product_cats as $product_cat) {
+//                            ?>
+<!--                            <option value="--><?php //echo esc_attr($product_cat->slug) ?><!--" --><?php //selected($product_cat->slug, $selected_product_cat) ?><!--><?php //echo esc_html($product_cat->name); ?><!--</option>-->
+<!---->
+<!--                            --><?php
+//                        }
+//                        ?>
+<!--                    </select>-->
 
                     <select name="product_cat" class="cate-dropdown">
                         <option value=""><?php echo '&mdash; '. esc_attr($cat_cities->name) .' &mdash;'; ?></option>

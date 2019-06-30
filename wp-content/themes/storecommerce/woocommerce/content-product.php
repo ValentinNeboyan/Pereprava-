@@ -116,13 +116,9 @@ if (empty($product) || !$product->is_visible()) {
                     <?php the_title(); ?>
                 </a>
             </h4>
-           <?php if (  $product_attributes= $product->get_attributes() ) { ?>
+           <?php if (  $product_attribute= $product->get_attribute('number_of_seats') ) { ?>
 
-                <?php foreach ( $product_attributes as $product_attribute_key => $product_attribute ) : ?>
-
-                   <span><?php if (wp_kses_post( $product_attribute['name']) == 'Вместительность') echo wp_kses_post( $product_attribute['value'] ); ?></span>
-
-                <?php endforeach; ?>
+                   <span><?php echo wp_kses_post( $product_attribute ); ?></span>
 
             <? }?>
             <span class="price">
