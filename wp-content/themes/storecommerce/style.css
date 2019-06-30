@@ -4871,6 +4871,10 @@ a{
 	border-color: #404040;
 }
 
+.woocommerce-pagination .page-numbers li a:visited{
+	color: #404040 !important;
+}
+
 a:visited{
 	color: #fff;
 	/*color: #404040;*/
