@@ -1550,6 +1550,7 @@ body .header-style-2.aft-transparent-header .header-left-part .logo-brand .site-
 .header-style-3 .search {
 	width: 55%;
 	text-align: right;
+	opacity: 0.9;
 }
 
 .header-style-3-1 .header-middle-part,
@@ -4873,6 +4874,10 @@ a{
 
 .woocommerce-pagination .page-numbers li a:visited{
 	color: #404040 !important;
+}
+
+.shop_table.cart.wishlist_table .product-name a:visited, .shop_table.cart.wishlist_table .product-name a{
+	color: #63CFD4 !important;
 }
 
 a:visited{

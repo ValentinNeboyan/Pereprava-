@@ -138,11 +138,11 @@
                         <?php echo esc_html($storecommerce_copy_right); ?>
                     <?php endif; ?>
 
-                        <span class="sep"> | </span>
-                        <?php
-                        /* translators: 1: Theme name, 2: Theme author. */
-                        printf(esc_html__('%1$s by %2$s.', 'storecommerce'), '<a href="https://afthemes.com/products/storecommerce">StoreCommerce</a>', 'AF themes');
-                        ?>
+<!--                        <span class="sep"> | </span>-->
+<!--                        --><?php
+//                        /* translators: 1: Theme name, 2: Theme author. */
+//                        printf(esc_html__('%1$s by %2$s.', 'storecommerce'), '<a href="https://afthemes.com/products/storecommerce">StoreCommerce</a>', 'AF themes');
+//                        ?>
 
                 </div>
 

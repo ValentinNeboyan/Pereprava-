@@ -503,7 +503,7 @@ msgstr ""
 #: includes/class.yith-wcwl-init.php:449
 #, fuzzy
 msgid "Product correctly added to cart"
-msgstr "Продукт успешно добавлен в корзину"
+msgstr "Успешно добавлен в корзину"
 
 #: includes/class.yith-wcwl-install.php:244
 #, fuzzy
@@ -717,12 +717,12 @@ msgstr ""
 #: includes/class.yith-wcwl.php:201
 #, fuzzy
 msgid "An error occurred while adding products to the wishlist."
-msgstr "Произошла ошибка при добавлении продуктов в избранное"
+msgstr "Произошла ошибка при добавлении в избранное"
 
 #: includes/class.yith-wcwl.php:293
 #, fuzzy
 msgid "An error occurred while adding products to wishlist."
-msgstr "Произошла ошибка при добавлении продуктов в избранное"
+msgstr "Произошла ошибка при добавлении в избранное"
 
 #: includes/class.yith-wcwl.php:310
 msgid "The \"Remove\" option now does not require any parameter"
@@ -731,7 +731,7 @@ msgstr ""
 #: includes/class.yith-wcwl.php:359
 #, fuzzy
 msgid "An error occurred while removing products from the wishlist"
-msgstr "Произошла ошибка при удалении продуктов из избранного"
+msgstr "Произошла ошибка при удалении из избранного"
 
 #: includes/class.yith-wcwl.php:809
 msgid "You need to log in before creating a new wishlist"
@@ -739,15 +739,15 @@ msgstr "Вам необходимо авторизоваться перед со
 
 #: includes/class.yith-wcwl.php:1610
 msgid "Product successfully removed."
-msgstr "Продукт успешно удален из избранного"
+msgstr "Успешно удален из избранного"
 
 #: includes/class.yith-wcwl.php:1614
 msgid "Error. Unable to remove the product from the wishlist."
-msgstr "Ошибка. Невозможно удалить продукт из избранного."
+msgstr "Ошибка. Невозможно удалить из избранного."
 
 #: includes/class.yith-wcwl.php:1618 templates/wishlist-view.php:242
 msgid "No products were added to the wishlist"
-msgstr "Нет продуктов добавленных в избранное."
+msgstr "Нет предложений добавленных в избранное."
 
 #: includes/class.yith-wcwl.php:1660
 msgid "An error as occurred."
@@ -1024,7 +1024,7 @@ msgstr ""
 
 #: templates/wishlist-view.php:82
 msgid "Product Name"
-msgstr "Имя продукта"
+msgstr "Наименование"
 
 #: templates/wishlist-view.php:89
 msgid "Unit Price"
@@ -1036,7 +1036,7 @@ msgstr "Показывать статус склада"
 
 #: templates/wishlist-view.php:152 templates/wishlist-view.php:232
 msgid "Remove this product"
-msgstr ""
+msgstr "Удалить"
 
 #: templates/wishlist-view.php:172
 msgid "Free!"
@@ -1052,7 +1052,7 @@ msgstr "в наличии"
 
 #: templates/wishlist-view.php:188
 msgid "Added on : %s"
-msgstr ""
+msgstr "Добавлено : %s"
 
 #: templates/wishlist-view.php:200
 msgid "Move"
