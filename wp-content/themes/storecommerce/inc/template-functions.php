@@ -622,8 +622,10 @@ if (!function_exists('custom_storecommerce_product_search_form')) :
 
                 ?>
                 <input type="search" id="woocommerce-product-search-field" class="search-field<?php echo esc_attr($search_autocomplete_class) ?>"
-                       placeholder="<?php echo esc_attr($search_placeholder); ?>"
+                       placeholder="Начните искать..."
                        value="<?php echo get_search_query(); ?>" name="s"/>
+<!--                       placeholder="<?php //echo esc_attr($search_placeholder); ?>"-->
+
                 <?php
 
                 if (!empty($product_cats) && !is_wp_error($product_cats)):
@@ -658,7 +660,7 @@ if (!function_exists('custom_storecommerce_product_search_form')) :
                 <label class="screen-reader-text"
                        for="woocommerce-product-search-field"><?php esc_html_e('Search for:', 'storecommerce'); ?></label>
 
-                <button type="submit" value=""><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button class="fx-search-button" type="submit" value=""><i class="fa fa-search" aria-hidden="true"></i><span>Поиск</span></button>
                 <input type="hidden" name="post_type" value="product"/>
 
             </div>

@@ -17,74 +17,6 @@
         }
 
         ?>
-<!--        <div class="aft-header-background  --><?php //echo esc_attr($class); ?><!--" data-background="--><?php //echo esc_attr($background); ?><!--">-->
-<!--            <div class="container-wrapper">-->
-<!---->
-<!--                <div class="header-left-part">-->
-<!--                    <div class="logo-brand">-->
-<!--                        <div class="site-branding">-->
-<!--                            --><?php
-//                            the_custom_logo();
-//                            if (is_front_page() && is_home()) :
-//                                ?>
-<!--                                <h1 class="site-title"><a href="--><?php //echo esc_url(home_url('/')); ?><!--"-->
-<!--                                                          rel="home">--><?php //bloginfo('name'); ?><!--</a></h1>-->
-<!--                            --><?php
-//                            else :
-//                                ?>
-<!--                                <h3 class="site-title"><a href="--><?php //echo esc_url(home_url('/')); ?><!--"-->
-<!--                                                          rel="home">--><?php //bloginfo('name'); ?><!--</a></h3>-->
-<!--                            --><?php
-//                            endif;
-//                            $storecommerce_description = get_bloginfo('description', 'display');
-//                            if ($storecommerce_description || is_customize_preview()) :
-//                                ?>
-<!--                                <p class="site-description">--><?php //echo $storecommerce_description; /* WPCS: xss ok. */ ?><!--</p>-->
-<!--                            --><?php //endif; ?>
-<!--                        </div> .site-branding -->
-<!--                    </div>-->
-<!--                    <div class="search">-->
-<!--                        --><?php //custom_storecommerce_product_search_form(); ?>
-<!--                    </div>-->
-<!--                    --><?php //if (class_exists('WooCommerce')): ?>
-<!--                        <div class="account-user">-->
-<!--                            --><?php
-//
-//
-//                            if (is_user_logged_in()) {
-//                                $current_user = wp_get_current_user();
-//                                //$account_texts = __('My Account', 'storecommerce');
-//                                $account_texts = $current_user->display_name;
-//                            } else {
-//                                $account_texts = __('Login', 'storecommerce');
-//                                if (get_option('users_can_register')) {
-//                                    $account_texts = __('Login/Register', 'storecommerce');
-//                                }
-//                            }
-//
-//                            ?>
-<!---->
-<!--                            <a href="--><?php //echo esc_url(get_permalink(get_option('woocommerce_myaccount_page_id'))); ?><!--">-->
-<!--                                  my account  <i class="fa fa-user-circle-o"></i>-->
-<!--                                --><?php //echo esc_html($account_texts); ?>
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    --><?php //endif; ?>
-<!--                    --><?php
-//                    $show_offcanvas = true;
-//                    if (is_active_sidebar('express-off-canvas-panel')): ?>
-<!--                        <div class="express-off-canvas-panel">-->
-<!--                                <span class="offcanvas">-->
-<!--                                     <a href="#offcanvasCollapse" class="offcanvas-nav">-->
-<!--                                          <i class="fa fa-th"></i>-->
-<!--                                       </a>-->
-<!--                                </span>-->
-<!--                        </div>-->
-<!--                    --><?php //endif; ?>
-<!---->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
         <div id="site-primary-navigation" class="navigation-section-wrapper clearfix fx-custom-navigation" data-date="555">
             
             <div class="fx-header-logo">
@@ -140,17 +72,7 @@
                             </span>
                         </div>
                     <?php endif; ?>
-                    <!--                    --><?php //if (class_exists('WooCommerce')): ?>
-                    <!---->
-                    <!--                        <div class="cart-shop">-->
-                    <!---->
-                    <!--                            <div class="af-cart-wrapper dropdown">-->
-                    <!--                                --><?php //storecommerce_woocommerce_header_cart(); ?>
-                    <!--                            </div>-->
-                    <!---->
-                    <!--                        </div>-->
-                    <!--                    --><?php //endif; ?>
-
+                  
                     <?php
                     $show_offcanvas = true;
                     if (is_active_sidebar('express-off-canvas-panel')): ?>
@@ -167,6 +89,10 @@
                 </div>
             </div>
         </div>
-        <hr class="fx-header-line">
+<!--        <hr class="fx-header-line">-->
+        <div class="search fx-search">
+            <?php custom_storecommerce_product_search_form(); ?>
+        </div>
+
     </div>
 </div>
