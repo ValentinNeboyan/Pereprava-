@@ -505,6 +505,11 @@ body.home .header-style-2.aft-transparent-header.aft-sticky-navigation,
 	transition: top 0.2s ease-in-out;
 }
 
+.header-style-3 {
+	max-width: 1200px;
+	margin: auto;
+}
+
 .header-style-3-1 .aft-sticky-navigation,
 .header-style-3 .aft-sticky-navigation {
 	top: -90px;
@@ -5205,7 +5210,7 @@ hr.fx-header-line {
 	top: 17%;
 }
 .fx-menu-item.fx-gift img {
-	height: 150px;
+	height: 140px;
 	top: 16%;
 }
 
@@ -5245,6 +5250,19 @@ a.fx-menu-item.fx-gift {
 	border: 0;
 	height: 3px;
 	margin-bottom: 1.5em;
+}
+
+.fx-menu-title {
+	position: absolute;
+	left: 52%;
+	line-height: 0.6;
+	color: black;
+	text-align: right;
+	width: 40%;
+}
+
+.fx-menu-title h2 {
+	color: black;
 }
 
 
@@ -5386,6 +5404,41 @@ body .select2-container .select2-selection--single{
 		width: 100%;
 
 	}
+
+	.fx-menu-item.fx-water img {
+		height: 100px;
+		top: 19%;
+	}
+
+	.fx-menu-item.fx-earth img {
+		height: 94px;
+		top: 29%;
+	}
+
+	.fx-menu-item.fx-air img {
+		height: 90px;
+		top: 24%;
+		left: 8%;
+	}
+	.fx-menu-item.fx-fire img {
+		height: 121px;
+		top: 15%;
+		left: 16%;
+	}
+	.fx-menu-item.fx-space img {
+		height: 100px;
+		top: 26%;
+	}
+	.fx-menu-item.fx-gift img {
+		height: 110px;
+		top: 37%;
+	}
+
+	.fx-menu-title {
+		left: 33%;
+		width: 62%;
+	}
+
 
 }
 @media screen and (min-width: 768px){
