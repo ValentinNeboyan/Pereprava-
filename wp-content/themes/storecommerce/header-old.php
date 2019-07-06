@@ -107,7 +107,7 @@ if (1 == $enable_preloader):
             </div>
         <?php endif; ?>
 
-        <?php storecommerce_get_block('header-custom'); ?>
+        <?php storecommerce_get_block('header'); ?>
     </header><!-- #masthead -->
 
     <?php if (is_front_page()): ?>

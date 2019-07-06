@@ -1289,7 +1289,7 @@ li:hover {
 	display: block;
 	/*margin-left: auto;*/
 	margin-right: auto;
-	background-color: #fff;
+	background-color: #63CFD4;
 	/*background-color: #282828;*/
 	position: relative;
 	-webkit-transition: all .25s ease-in-out;
@@ -1305,7 +1305,7 @@ li:hover {
 	height: 2px;
 	left: 0;
 	top: -8px;
-	background-color: #fff;
+	background-color: #63CFD4;
 	/*background-color: #282828;*/
 	-webkit-transition: all .25s ease-in-out;
 	-moz-transition: all .25s ease-in-out;
@@ -1498,7 +1498,7 @@ body .header-right-part .search .open-search-form,
 body .header-style-2.aft-transparent-header .aft-wishlist-trigger,
 body .header-style-2.aft-transparent-header .main-navigation .menu > li > a,
 body .header-style-2.aft-transparent-header .header-left-part .logo-brand .site-description {
-    color: #fff;
+    color: #63cfd4;
     /*color: #404040;*/
 }
 .header-style-2 .desktop-header {
@@ -1529,6 +1529,8 @@ body .header-style-2.aft-transparent-header .header-left-part .logo-brand .site-
 .header-style-3 .navigation-section-wrapper .container-wrapper,
 .header-style-3-1 .navigation-section-wrapper .container-wrapper{
 	position: relative;
+	background-color: #fff;
+	margin: auto;
 }
 
 .header-style-3 .header-left-part {
@@ -4881,7 +4883,7 @@ a{
 }
 
 a:visited{
-	color: #fff;
+	color: #63cfd4;
 	/*color: #404040;*/
 }
 #add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment,
@@ -4991,14 +4993,14 @@ span.offer-time.btn-style1 a{
 body .header-style-3-1 .navigation-section-wrapper,
 body .header-style-3 .navigation-section-wrapper
 {
-	background-color: #63CFD4;
-	/*background-color: #ffffff;*/
+	/*background-color: #63CFD4;*/
+	background-color: #ffffff;
 }
 body .main-navigation .menu ul.menu-desktop > li > a,
 p.woocommerce-mini-cart__empty-message,
 body .af-cart-icon-and-count:after
 {
-	color: #fff;
+	color: #63cfd4;
 	/*color: #404040;*/
 }
 
@@ -5017,7 +5019,7 @@ body.home .header-style-2.aft-transparent-header.aft-sticky-navigation .af-cart-
 body .main-navigation .menu ul.menu-desktop > li > a:visited
 {
 	/*color: #404040;*/
-	color: #fff;
+	color: #63CFD4 !important;
 }
 .posts_latest_widget .posts-date,
 span.offer-date-counter > span,
@@ -5126,6 +5128,23 @@ body footer.site-footer .site-info a {
 }
 
 
+.fx-custom-navigation {
+	display: flex;
+}
+.fx-header-logo {
+	width: 25%;
+}
+
+hr.fx-header-line {
+	background-color: #63cfd4;
+	border: 0;
+	height: 1px;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	/* margin-bottom: 1.5em; */
+}
+
+
 /*defaults============================*/
 
 .dropdown-backdrop{
@@ -5172,6 +5191,34 @@ body .select2-container .select2-selection--single{
 @media screen and (max-width: 991px){
 	.main-navigation ul ul{
 		left: 0;
+	}
+
+	.fx-custom-navigation {
+		display: unset;
+	}
+	.fx-header-logo {
+		width: 100%;
+	}
+
+	.header-style-3 .navigation-section-wrapper .container-wrapper,
+	.header-style-3-1 .navigation-section-wrapper .container-wrapper{
+		background-color: #63cfd4;
+		margin: 0;
+		width: 100%;
+	}
+
+	.wishlist-icon a:visited, .account-user.aft-show-on-mobile a, .open-search-form {
+		color: #fff !important;
+	}
+	.ham, .ham:after, .ham:before {
+		background-color: #fff !important;
+	}
+	.ham.exit {
+		background-color: transparent !important;
+	}
+
+	.top-header {
+		height: 60px;
 	}
 }
 @media screen and (min-width: 768px){
