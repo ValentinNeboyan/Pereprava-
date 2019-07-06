@@ -5157,7 +5157,95 @@ hr.fx-header-line {
 	/* margin-bottom: 1.5em; */
 }
 
+.fx-main-page-menu {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-around;
+	margin: 50px 0;
+}
+.fx-menu-item {
+	width: 45%;
+	height: 200px;
+	/*border: 2px solid #63cfd4;*/
+	margin: 10px;
+	border-radius: 10px;
+	position: relative;
+	cursor: pointer;
+	-webkit-box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.65);
+	box-shadow: 5px 5px 8px 2px rgba(0,0,0,0.65);
+}
 
+.fx-menu-item img {
+	top: 35%;
+	left: 10%;
+	position: absolute;
+}
+.fx-menu-item.fx-water img {
+	height: 150px;
+	top: 10%;
+}
+
+.fx-menu-item.fx-earth img {
+	height: 140px;
+	top:19%
+}
+
+.fx-menu-item.fx-air img {
+	height: 120px;
+	top: 20%;
+}
+.fx-menu-item.fx-fire img {
+	height: 160px;
+	top: 7%;
+	left: 16%;
+}
+.fx-menu-item.fx-space img {
+	height: 140px;
+	top: 17%;
+}
+.fx-menu-item.fx-gift img {
+	height: 150px;
+	top: 16%;
+}
+
+a.fx-menu-item.fx-water {
+	background-color: #87cefa;
+}
+
+a.fx-menu-item.fx-earth {
+	background-color: #cab6b6;
+}
+
+a.fx-menu-item.fx-air {
+	background-color: #a8f3f3b8;
+}
+a.fx-menu-item.fx-fire {
+	background-color: #ffc7c7;
+}
+a.fx-menu-item.fx-space {
+	background-color: #e8ccf9;
+}
+a.fx-menu-item.fx-gift {
+	background-color: #fff3d7;
+}
+
+.fx-main-page-line {
+	display: flex;
+}
+
+.fx-main-page-line span {
+	width: 20%;
+	font-size: 25px;
+}
+
+.fx-main-page-line hr {
+	width: 80%;
+	background-color: #63cfd4;
+	border: 0;
+	height: 3px;
+	margin-bottom: 1.5em;
+}
 
 
 /*defaults============================*/
@@ -5202,8 +5290,8 @@ body .select2-container .select2-selection--single{
 	.style-3-search .search-field {
 		width: 40%;
 	}
-	.style-3-search .cate-dropdown{width: 180px;}
-	.header-style-3 .search{width: 48%;}
+	/*.style-3-search .cate-dropdown{width: 180px;}*/
+	/*.header-style-3 .search{width: 48%;}*/
 }
 
 @media screen and (min-width: 992px){
@@ -5289,6 +5377,16 @@ body .select2-container .select2-selection--single{
     .fx-search-button .fa-search:before {
         content: unset;
     }
+
+	.fx-menu-item {
+		width: 100%;
+	}
+
+	.fx-main-page-line span {
+		width: 100%;
+
+	}
+
 }
 @media screen and (min-width: 768px){
 	.aft-show-on-mobile{
