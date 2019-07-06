@@ -20,7 +20,7 @@
         <div id="site-primary-navigation" class="navigation-section-wrapper clearfix fx-custom-navigation" data-date="555">
             
             <div class="fx-header-logo">
-                <a href="/">
+                <a href="/" title="Перейти на Главная">
                     <img src="http://www.pereprava.plus/wp-content/uploads/2019/07/logo.gif" alt="">
                 </a>
 
@@ -72,7 +72,41 @@
                             </span>
                         </div>
                     <?php endif; ?>
-                  
+                    <?php if (class_exists('WooCommerce')): ?>
+                        <div class="account-user">
+                            <?php
+
+
+                            if (is_user_logged_in()) {
+                                $current_user = wp_get_current_user();
+                                //$account_texts = __('My Account', 'storecommerce');
+                                $account_texts = $current_user->display_name;
+                            } else {
+                                $account_texts = __('Login', 'storecommerce');
+                                if (get_option('users_can_register')) {
+                                    $account_texts = __('Login/Register', 'storecommerce');
+                                }
+                            }
+
+                            ?>
+
+                            <a href="<?php echo esc_url(get_permalink(get_option('woocommerce_myaccount_page_id'))); ?>"
+                               title=" <?php echo esc_html($account_texts); ?>">
+                                <!--  my account --> <i class="fa fa-user-circle-o"></i>
+
+                            </a>
+                        </div>
+                    <?php endif; ?>
+<!--                    --><?php //if (class_exists('WooCommerce')): ?>
+<!---->
+<!--                        <div class="cart-shop">-->
+<!---->
+<!--                            <div class="af-cart-wrapper dropdown">-->
+<!--                                --><?php //storecommerce_woocommerce_header_cart(); ?>
+<!--                            </div>-->
+<!---->
+<!--                        </div>-->
+<!--                    --><?php //endif; ?>
                     <?php
                     $show_offcanvas = true;
                     if (is_active_sidebar('express-off-canvas-panel')): ?>

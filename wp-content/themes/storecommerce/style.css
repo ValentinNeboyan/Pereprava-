@@ -1528,9 +1528,10 @@ body .header-style-2.aft-transparent-header .header-left-part .logo-brand .site-
 }
 .header-style-3 .navigation-section-wrapper .container-wrapper,
 .header-style-3-1 .navigation-section-wrapper .container-wrapper{
-	position: relative;
-	background-color: #fff;
-	margin: auto;
+    position: relative;
+    background-color: #fff;
+    margin: auto 0;
+    width: 75%;
 }
 
 .header-style-3 .header-left-part {
@@ -1580,6 +1581,7 @@ body .header-style-2.aft-transparent-header .header-left-part .logo-brand .site-
 .header-style-3-1 .header-right-part{padding: 6px 0;}
 .header-style-3 .header-right-part{
 	padding: 15px 0px;
+    float: right;
 }
 
 .header-style-3 .header-right-part > div {
@@ -3010,6 +3012,7 @@ a:hover, a:active {
 	color: #fff;
 	/*color: #000;*/
 	position: relative;
+    font-size: 16px;
 
 }
 .main-navigation .menu > li > a:before {
