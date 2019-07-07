@@ -66,8 +66,24 @@ if (post_password_required()) {
                  * @hooked WC_Structured_Data::generate_product_data() - 60
                  */
                 do_action('woocommerce_single_product_summary');
+
                 ?>
+                <?php
+                $youtubeKey = '';
+                $productYoutubeLink = array_shift(get_post_meta(get_the_ID(), 'youtube' ));
+                preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $productYoutubeLink, $matches);
+                if(isset($matches[2]) && $matches[2] != ''){
+                    $youtubeKey = $matches[2];
+                }
+//                $youtubeKey = array_pop(explode('/', $productYoutubeLink));
+                ?>
+                <?php if ($youtubeKey) {?>
+                <button class="fx-video-popup">Показать видео</button>
+                <?php }?>
             </div>
+            <iframe id="ytplayer" class="fx-product-youtube" type="text/html" width="640" height="360"
+                    src="http://www.youtube.com/embed/<?php echo $youtubeKey?>"
+                    frameborder="0"></iframe>
         </div>
 
         <?php
@@ -82,5 +98,6 @@ if (post_password_required()) {
         do_action('woocommerce_single_product_info');
         ?>
     </div>
+
 
 <?php do_action('woocommerce_after_single_product'); ?>

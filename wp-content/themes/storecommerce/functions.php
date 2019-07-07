@@ -395,3 +395,5 @@ add_action('admin_menu','hide_admin_notices');
 function hide_admin_notices() {
     remove_action( 'admin_notices', 'update_nag', 3 );
 }
+
+wp_enqueue_script('newscript', get_template_directory_uri() . '/js/fx-app.js');
