@@ -368,3 +368,32 @@ remove_action( 'woocommerce_variable_add_to_cart', 'woocommerce_variable_add_to_
 remove_action( 'woocommerce_external_add_to_cart', 'woocommerce_external_add_to_cart', 30 );
 remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10 );
 remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation_add_to_cart_button', 20 );
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+
+add_action('woocommerce_single_product_info', 'fx_displayProductInfo');
+
+function fx_displayProductInfo(){
+    wc_get_template( 'single-product/tabs/tabs-custom.php' );
+}
+
+add_filter( 'site_transient_update_plugins', 'woocommerce_site_transient_update_plugins' ); // Блокируем обновление woocommerce
+function woocommerce_site_transient_update_plugins ( $value ) {
+
+    unset( $value->response['woocommerce/woocommerce.php'] );
+
+    return $value;
+}
+
+// ОТКЛЮЧАЕМ ОБНОВЛЕНИЕ ТЕМ
+remove_action( 'load-update-core.php', 'wp_update_themes' );
+add_filter( 'pre_site_transient_update_themes', '__return_null' );
+
+// ОТКЛЮЧАЕМ АВТО ОБНОВЛЕНИЯ
+add_filter( 'auto_update_theme', '__return_false' );
+
+// СПРЯЧЕМ ИМЕЮЩИЕСЯ УВЕДОМЛЕНИЯ
+add_action('admin_menu','hide_admin_notices');
+function hide_admin_notices() {
+    remove_action( 'admin_notices', 'update_nag', 3 );
+}

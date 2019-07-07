@@ -98,7 +98,8 @@ class WC_Template_Loader {
 	 */
 	private static function get_template_loader_default_file() {
 		if ( is_singular( 'product' ) ) {
-			$default_file = 'single-product.php';
+			$default_file = 'single-product-custom.php';
+//			$default_file = 'single-product.php';
 		} elseif ( is_product_taxonomy() ) {
 			$object = get_queried_object();
 

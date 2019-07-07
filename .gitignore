@@ -3,3 +3,4 @@
 .idea
 out
 wp-content/uploads/wc-logs/
+wp-content/debug.log
