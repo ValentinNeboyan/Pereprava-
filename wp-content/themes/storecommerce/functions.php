@@ -397,3 +397,79 @@ function hide_admin_notices() {
 }
 
 wp_enqueue_script('newscript', get_template_directory_uri() . '/js/fx-app.js');
+
+require get_template_directory() . '/trueMetaBox.php';
+
+$options = array(
+    array( // первый метабокс
+        'id'	=>	'owner', // ID метабокса, а также префикс названия произвольного поля
+        'name'	=>	'Контакты владельца', // заголовок метабокса
+        'post'	=>	array('product'), // типы постов для которых нужно отобразить метабокс
+        'pos'	=>	'normal', // расположение, параметр $context функции add_meta_box()
+        'pri'	=>	'high', // приоритет, параметр $priority функции add_meta_box()
+        'cap'	=>	'edit_posts', // какие права должны быть у пользователя
+        'args'	=>	array(
+            array(
+                'id'			=>	'phone', // атрибуты name и id без префикса, например с префиксом будет owner
+                'title'			=>	'Телефон', // лейбл поля
+                'type'			=>	'text', // тип, в данном случае обычное текстовое поле
+                'placeholder'	=>	'', // атрибут placeholder
+                'desc'			=>	'Введите номер телефона', // что-то типа пояснения, подписи к полю
+                'cap'			=>	'edit_posts'
+            ),
+            array(
+                'id'			=>	'phone2',
+                'title'			=>	'Телефон 2',
+                'type'			=>	'text',
+                'placeholder'	=>	'',
+                'desc'			=>	'Введите номер телефона',
+                'cap'			=>	'edit_posts'
+            ),
+            array(
+                'id'			=>	'email',
+                'title'			=>	'Email',
+                'type'			=>	'text',
+                'placeholder'	=>	'',
+                'desc'			=>	'Введите электронную почту',
+                'cap'			=>	'edit_posts'
+            ),
+            array(
+                'id'			=>	'name',
+                'title'			=>	'Имя владельца',
+                'type'			=>	'text',
+                'placeholder'	=>	'',
+                'desc'			=>	'',
+                'cap'			=>	'edit_posts'
+            ),
+//            array(
+//                'id'			=>	'select1',
+//                'title'			=>	'Выпадающий список',
+//                'type'			=>	'select', // выпадающий список
+//                'desc'			=>	'тут тоже можно написать пояснение к полю, значения же задаются через ассоциативный массив',
+//                'cap'			=>	'edit_posts',
+//                'args'			=>	array('value_1' => 'Значение 1', '2' => 'Значение 2', 'Значение_3' => 'Значение 3' ) // элементы списка задаются через массив args, по типу value=>лейбл
+//            )
+        )
+    ),
+    array( // второй метабокс
+        'id'	=>	'product',
+        'name'	=>	'Youtube',
+        'post'	=>	array('product', 'page'),
+        'pos'	=>	'normal',
+        'pri'	=>	'high',
+        'cap'	=>	'edit_posts',
+        'args'	=>	array(
+            array(
+                'id'			=>	'youtube',
+                'title'			=>	'Введите ссылку на ролик в youtube',
+                'desc'			=>	'пример:"https://www.youtube.com/watch?v=1ugivNRYfjc"',
+                'type'			=>	'text',
+                'cap'			=>	'edit_posts'
+            )
+        )
+    )
+);
+
+foreach ($options as $option) {
+    $trueMetaBox = new trueMetaBox($option);
+}

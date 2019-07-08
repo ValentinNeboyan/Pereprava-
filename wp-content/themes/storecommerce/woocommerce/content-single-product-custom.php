@@ -69,8 +69,11 @@ if (post_password_required()) {
 
                 ?>
                 <?php
+//                echo '<pre>';
+//                $meta = get_post_meta(get_the_ID());
+//                var_dump($meta);
                 $youtubeKey = '';
-                $productYoutubeLink = array_shift(get_post_meta(get_the_ID(), 'youtube' ));
+                $productYoutubeLink = array_shift(get_post_meta(get_the_ID(), 'product_youtube' ));
                 preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $productYoutubeLink, $matches);
                 if(isset($matches[2]) && $matches[2] != ''){
                     $youtubeKey = $matches[2];
