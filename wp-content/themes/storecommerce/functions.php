@@ -371,8 +371,8 @@ remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation_add
 
 add_action('woocommerce_single_product_info', 'fx_displayProductInfo');
 
-function fx_displayProductInfo(){
-    wc_get_template( 'single-product/tabs/tabs-custom.php' );
+function fx_displayProductInfo($fxTabFilter){
+    wc_get_template( 'single-product/tabs/tabs-custom.php', $fxTabFilter );
 }
 
 add_filter( 'site_transient_update_plugins', 'woocommerce_site_transient_update_plugins' ); // Блокируем обновление woocommerce
@@ -472,4 +472,19 @@ $options = array(
 
 foreach ($options as $option) {
     $trueMetaBox = new trueMetaBox($option);
+}
+
+add_filter ( 'woocommerce_account_menu_items', 'fx_RemoveMyAccountLinks' );
+function fx_RemoveMyAccountLinks( $menu_links ){
+
+    unset( $menu_links['edit-address'] ); // Addresses
+    //unset( $menu_links['dashboard'] ); // Remove Dashboard
+    unset( $menu_links['payment-methods'] ); // Remove Payment Methods
+    unset( $menu_links['orders'] ); // Remove Orders
+    unset( $menu_links['downloads'] ); // Disable Downloads
+    //unset( $menu_links['edit-account'] ); // Remove Account details tab
+    //unset( $menu_links['customer-logout'] ); // Remove Logout link
+
+    return $menu_links;
+
 }

@@ -66,6 +66,10 @@ if (post_password_required()) {
                  * @hooked WC_Structured_Data::generate_product_data() - 60
                  */
                 do_action('woocommerce_single_product_summary');
+                global $fxTabFilter;
+
+                $fxTabFilter = 'details';
+                do_action('woocommerce_single_product_info', $fxTabFilter);
 
                 ?>
                 <?php
@@ -98,7 +102,8 @@ if (post_password_required()) {
          * @hooked woocommerce_output_related_products - 20
          */
 //        do_action('woocommerce_after_single_product_summary');
-        do_action('woocommerce_single_product_info');
+        $fxTabFilter = '';
+        do_action('woocommerce_single_product_info', $fxTabFilter);
         ?>
     </div>
 
