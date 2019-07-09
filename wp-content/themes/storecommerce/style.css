@@ -566,7 +566,8 @@ select,
 optgroup,
 textarea {
 	color: #4a4a4a;
-	font-family: sans-serif;
+	font-family: "Helvetica Neue";
+	font-weight: bold;
 	font-size: 14px;
 	line-height: 1.5;
 
@@ -602,7 +603,8 @@ h6,
 .af-navcontrols .slide-count,
 .figure-categories .cat-links,
 .nav-links a {
-	font-family: Raleway;
+	font-family: "Helvetica Neue";
+	font-weight: bold;
 }
 
 
@@ -1243,7 +1245,7 @@ li:hover {
 
 .header-right-part .aft-show-on-mobile > div i,
 .header-right-part a{
-	color: #000;
+	color: #fff;
 }
 .header-right-part .cart-shop {
 	display: inline-block;
@@ -2488,7 +2490,7 @@ ul.product-item-meta li {
 	white-space: nowrap;
 	vertical-align: middle;
 	border-radius: 100%;
-	background: #d21406;
+	background: #1be60d !important;
 }
 
 
@@ -4444,7 +4446,7 @@ p.comment-form-url input, p.comment-form-email input, p.comment-form-author inpu
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	/*margin: 1.5em 0 0;*/
 }
 
 .page-links {
@@ -5301,6 +5303,43 @@ a.fx-menu-item.fx-gift {
 	cursor: default;
 }
 
+#review_form_wrapper {
+	display: none;
+}
+
+.fx-reviews-button {
+	margin: auto;
+	display: block;
+	border: unset;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.fx-reviews-button:focus{
+	outline: unset !important;
+}
+
+.comment_container {
+	width: 30%;
+	border: 2px solid;
+	border-radius: 10px;
+	padding: 10px;
+	min-height: 130px;
+}
+
+.comment_container img {
+	position: unset !important;
+	top: unset !important;
+	left: unset !important;
+	border-radius: 100px !important;
+}
+
+.comment_container .comment-text {
+	border: unset !important;
+	padding: unset !important;
+}
+
 
 /*defaults============================*/
 
@@ -5654,7 +5693,8 @@ body .select2-container .select2-selection--single{
 }
 @media only screen and (max-width: 768px) and (min-width: 426px)  {
 	.primary-footer-area {
-		width: 50%;
+		margin: auto !important;
+		width: 40%;
 		float: left;
 	}
 	.btm-margi{margin-bottom: 30px;}
@@ -5682,6 +5722,11 @@ body .select2-container .select2-selection--single{
 		padding: 10px 30px;
 	}
 	.half-post-wid{width: 50%;}
+
+	.comment_container {
+		width: 50%;
+
+	}
 }
 
 @media screen and (max-width: 667px){
@@ -5735,6 +5780,11 @@ body .select2-container .select2-selection--single{
 
 }
 @media screen and (max-width: 426px){
+
+	.comment_container {
+		width: 100%;
+
+	}
 
 	.top-bar-flex {
 		flex-wrap: wrap;

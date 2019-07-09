@@ -303,7 +303,7 @@ ul.products li.product .button.add_to_cart_button.product_type_simple:after {
 .woocommerce-page #content div.product div.images,
 .woocommerce-page div.product div.images {
 	float: left;
-	width: 55%;
+	width: 41%;
 }
 
 .woocommerce #content div.product div.summary,
@@ -311,7 +311,7 @@ ul.products li.product .button.add_to_cart_button.product_type_simple:after {
 .woocommerce-page #content div.product div.summary,
 .woocommerce-page div.product div.summary{
 	padding: 0 15px 0 10px;
-	width: 44%;
+	width: 56%;
 }
 
 

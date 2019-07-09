@@ -15,4 +15,18 @@ jQuery( function( $ ) {
         $('.fx-product-youtube').attr("src",leg);
     });
 
+    $(document).on('click', '.fx-reviews-button', function () {
+        $('#review_form_wrapper').css('display', 'block');
+        $(this).addClass('active');
+        $(this).text('Отказаться');
+    });
+
+    $(document).on('click', '.fx-reviews-button.active', function () {
+        $('#review_form_wrapper').css('display', 'none');
+        $(this).removeClass('active');
+        $(this).text('Оставить отзыв');
+    });
+    
+
+
 });

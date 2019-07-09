@@ -533,7 +533,7 @@ if (!function_exists('storecommerce_display_wishlist_message')) {
                     $product_id = $details['add_to_wishlist'];
                     $product = wc_get_product($product_id);
                     if (!is_wp_error($product)) {
-                        $product_title = sprintf(__('%s has been added to your wishist.', 'storecommerce'), '<strong>' . $product->get_title() . '</strong>');
+                        $product_title = sprintf(__('%s был добавлен в Список желаний.', 'storecommerce'), '<strong>' . $product->get_title() . '</strong>');
                         $product_image = $product->get_image();
 
                         ob_start();
