@@ -36,6 +36,10 @@ if (post_password_required()) {
 ?>
     <div id="product-<?php the_ID(); ?>" <?php post_class(); ?> data-date="999">
         <div class="storecommerce-product-summary-wrap clearfix">
+
+            <div>
+
+            </div>
             <div class="product-summary-wrapper">
                 <div class="badge-wrapper">
                     <?php do_action('storecommerce_woocommerce_show_product_loop_sale_flash'); ?>
@@ -50,7 +54,9 @@ if (post_password_required()) {
                 //do_action('storecommerce_woocommerce_show_product_loop_sale_flash');
                 do_action('woocommerce_before_single_product_summary');
                 ?>
+
             </div>
+
             <div class="summary entry-summary">
                 <?php
                 /**
@@ -102,6 +108,10 @@ if (post_password_required()) {
         $fxTabFilter = 'reviews';
         do_action('woocommerce_after_single_product_summary', $fxTabFilter);
         ?>
+
+        <div class="fx-product-rent-form">
+            <?php echo do_shortcode('[contact-form-7 id="440" title="Арендовать"]')?>
+        </div>
     </div>
 
 

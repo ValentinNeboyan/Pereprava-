@@ -49,4 +49,8 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 		do_action( 'woocommerce_product_thumbnails' );
 		?>
 	</figure>
+    <div class="fx-single-product-buttons">
+        <button class="fx-rent-button">Арендовать</button>
+        <button class="fx-location-button">Местоположение</button>
+    </div>
 </div>

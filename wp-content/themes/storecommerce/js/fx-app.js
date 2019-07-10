@@ -26,6 +26,14 @@ jQuery( function( $ ) {
         $(this).removeClass('active');
         $(this).text('Оставить отзыв');
     });
+
+    $(document).on('click', '.fx-rent-button', function () {
+        $('.fx-product-rent-form').css('display', 'block');
+    });
+
+    $(document).on('click', '.close-popup', function () {
+        $('.fx-product-rent-form').css('display', 'none');
+    });
     
 
 
