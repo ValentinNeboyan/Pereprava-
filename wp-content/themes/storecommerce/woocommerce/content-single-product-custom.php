@@ -73,16 +73,12 @@ if (post_password_required()) {
 
                 ?>
                 <?php
-//                echo '<pre>';
-//                $meta = get_post_meta(get_the_ID());
-//                var_dump($meta);
                 $youtubeKey = '';
                 $productYoutubeLink = array_shift(get_post_meta(get_the_ID(), 'product_youtube' ));
                 preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $productYoutubeLink, $matches);
                 if(isset($matches[2]) && $matches[2] != ''){
                     $youtubeKey = $matches[2];
                 }
-//                $youtubeKey = array_pop(explode('/', $productYoutubeLink));
                 ?>
                 <?php if ($youtubeKey) {?>
                 <button class="fx-video-popup">Показать видео</button>
@@ -101,9 +97,10 @@ if (post_password_required()) {
          * @hooked woocommerce_upsell_display - 15
          * @hooked woocommerce_output_related_products - 20
          */
-//        do_action('woocommerce_after_single_product_summary');
-        $fxTabFilter = '';
-        do_action('woocommerce_single_product_info', $fxTabFilter);
+
+        global $fxTabFilter;
+        $fxTabFilter = 'reviews';
+        do_action('woocommerce_after_single_product_summary', $fxTabFilter);
         ?>
     </div>
 
