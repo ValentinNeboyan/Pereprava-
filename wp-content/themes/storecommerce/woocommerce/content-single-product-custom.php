@@ -109,9 +109,7 @@ if (post_password_required()) {
         do_action('woocommerce_after_single_product_summary', $fxTabFilter);
         ?>
 
-        <div class="fx-product-rent-form">
-            <?php echo do_shortcode('[contact-form-7 id="440" title="Арендовать"]')?>
-        </div>
+
     </div>
 
 

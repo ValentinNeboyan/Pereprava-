@@ -134,7 +134,9 @@ if (1 == $enable_preloader):
     <?php
     $container_class = (is_page_template('tmpl-front-page.php')) ? '' : 'container-wrapper';
     ?>
-
+    <div class="fx-product-rent-form">
+        <?php echo do_shortcode('[contact-form-7 id="440" title="Арендовать"]')?>
+    </div>
     <div id="content" class="site-content <?php echo esc_attr($container_class); ?>">
 
         <?php echo do_action('storecommerce_before_main_content'); ?>

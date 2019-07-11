@@ -5370,7 +5370,7 @@ a.fx-menu-item.fx-gift {
 .fx-product-rent-form {
 	display: none;
 	position: absolute;
-	top: 0;
+	top: 30%;
 	left: 25%;
 	z-index: 40;
 }
@@ -5404,6 +5404,7 @@ a.fx-menu-item.fx-gift {
 	right: 20%;
 	font-size: 25px;
 	cursor: pointer;
+	background-image: url(images/close-button.svg);
 }
 
 .fx-column {
@@ -5798,12 +5799,13 @@ body .select2-container .select2-selection--single{
 
 	.fx-product-rent-form {
 		width: 100%;
-		top: 0;
+		top: 38%;
 		left: 0;
+		max-width: 400px;
 	}
 
 	.fx-rent-form {
-		width: 330px;
+		width: 100%;
 		max-height: 400px;
 	}
 
@@ -5840,11 +5842,10 @@ body .select2-container .select2-selection--single{
 
 	.close-popup {
 		background-color: #fff;
-		border: 1px solid #63cfd4;
 		width: 40px;
 		height: 40px;
 		top: -5%;
-		right: 40%;
+		right: 45%;
 		font-size: 34px;
 		line-height: 1.2;
 		padding-left: 7px;

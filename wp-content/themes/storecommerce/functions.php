@@ -458,7 +458,7 @@ $options = array(
     array( // второй метабокс
         'id'	=>	'product',
         'name'	=>	'Youtube',
-        'post'	=>	array('product', 'page'),
+        'post'	=>	array('product'),
         'pos'	=>	'normal',
         'pri'	=>	'high',
         'cap'	=>	'edit_posts',
@@ -471,11 +471,71 @@ $options = array(
                 'cap'			=>	'edit_posts'
             )
         )
-    )
+    ) ,
+//    array(
+//        'id'	=>	'location',
+//        'name'	=>	'Maps',
+//        'post'	=>	array('product'),
+//        'pos'	=>	'normal',
+//        'pri'	=>	'high',
+//        'cap'	=>	'edit_posts',
+//        'args'	=>	array(
+//            array(
+//                'id'   => 'address',
+//                'name' => 'Address',
+//                'type' => 'text',
+//                'cap'			=>	'edit_posts',
+//            ),
+//// Map field.
+//            array(
+//                'id'            => 'map',
+//                'name'          => 'Location',
+//                'type'          => 'map',
+//                'cap'			=>	'edit_posts',
+//
+//                // Локация по умолчанию: формат: 'latitude,longitude[,zoom]' (zoom не обязательно)
+//                'std'           => '-6.233406,-35.049906,15',
+//
+//                // ID текстового поля для адреса
+//                'address_field' => 'address',
+//
+//                // Google API ключ
+//                'api_key'       => 'XXXXXXXXX',
+//            ),
+//        )
+//    )
 );
 
 foreach ($options as $option) {
     $trueMetaBox = new trueMetaBox($option);
+}
+
+add_filter( 'rwmb_meta_boxes', 'prefix_register_meta_boxes' );
+function prefix_register_meta_boxes( $meta_boxes ) {
+
+    $prefix = 'field_prefix_';
+
+    $meta_boxes[] = array(
+        'id'         => 'personal',
+        'title'      => 'Личная информация',
+        'post_types' => 'product',
+        'context'    => 'normal',
+        'priority'   => 'high',
+
+        'fields' => array(
+            array(
+                'name'  => 'Как Вас зовут?',
+                'desc'  => 'Формат: {Имя} {Фамилия} {Отчество}',
+                'id'    => $prefix . 'name',
+                'type'  => 'text',
+            ),
+        )
+    );
+
+    // Ещё метабоксы
+    // $meta_boxes[] = ...
+
+    return $meta_boxes;
 }
 
 add_filter ( 'woocommerce_account_menu_items', 'fx_RemoveMyAccountLinks' );
