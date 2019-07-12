@@ -49,6 +49,9 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 		do_action( 'woocommerce_product_thumbnails' );
 		?>
 	</figure>
+    <ul class="product-item-meta verticle">
+        <li><?php do_action('storecommerce_woocommerce_add_to_wishlist_button');?></li>
+    </ul>
     <div class="fx-single-product-buttons">
         <button class="fx-rent-button">Арендовать</button>
         <button class="fx-location-button">Местоположение</button>

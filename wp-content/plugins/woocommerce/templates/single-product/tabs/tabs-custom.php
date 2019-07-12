@@ -31,6 +31,8 @@ $filter = $GLOBALS['fxTabFilter'];
 
 $tabKeys = ['description', 'additional_information', 'reviews'];
 
+$tabs = array_reverse($tabs);
+
 if ( ! empty( $tabs ) ) : ?>
 
     <?php if ($filter == 'reviews') : ?>

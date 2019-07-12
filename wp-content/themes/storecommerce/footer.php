@@ -121,7 +121,9 @@
     <?php endif; ?>
     <div class="site-info">
         <div class="container-wrapper">
+
             <div class="site-info-wrap">
+
 
                 <?php
                 $storecommerce_secure_payment_badge = storecommerce_get_option('secure_payment_badge');
@@ -131,12 +133,11 @@
                 if (!empty($storecommerce_secure_payment_badge) && !empty( $storecommerce_copy_right ) ){
                     $class = 'col-2 float-l';
                 } ?>
-
-                <div class="<?php echo esc_attr($class); ?>">
-                    <?php  ?>
-                    <?php if (!empty($storecommerce_copy_right)): ?>
-                        <?php echo esc_html($storecommerce_copy_right); ?>
-                    <?php endif; ?>
+<!--                <div class="--><?php //echo esc_attr($class); ?><!--">-->
+<!--                    --><?php // ?>
+<!--                    --><?php //if (!empty($storecommerce_copy_right)): ?>
+<!--                        --><?php //echo esc_html($storecommerce_copy_right); ?>
+<!--                    --><?php //endif; ?>
 
 <!--                        <span class="sep"> | </span>-->
 <!--                        --><?php
@@ -144,6 +145,15 @@
 //                        printf(esc_html__('%1$s by %2$s.', 'storecommerce'), '<a href="https://afthemes.com/products/storecommerce">StoreCommerce</a>', 'AF themes');
 //                        ?>
 
+<!--                </div>-->
+                <div class="footer-contacts">
+                    <a href="mailto:perepravaplus@gmail.com" class="footer-mail">perepravaplus@gmail.com</a>
+                    <a href="tel:+380669284338" class="footer-phone"> +38 (066) 928-43-38</a>
+                </div>
+                <div class="social">
+                    <!--					<span>Мы в соц сетях:</span>-->
+                    <a class="instagram-icon" href="#" target="_blank"></a>
+                    <a class="facebook-icon" href="https://www.facebook.com/groups/1482989298682239/?fref=ts" target="_blank"></a>
                 </div>
 
                 <?php
