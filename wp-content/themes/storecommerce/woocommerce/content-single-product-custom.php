@@ -91,7 +91,7 @@ if (post_password_required()) {
                 <?php }?>
             </div>
             <iframe id="ytplayer" class="fx-product-youtube" type="text/html" width="640" height="360"
-                    src="http://www.youtube.com/embed/<?php echo $youtubeKey?>"
+                    src="https://www.youtube.com/embed/<?php echo $youtubeKey?>"
                     frameborder="0"></iframe>
         </div>
 

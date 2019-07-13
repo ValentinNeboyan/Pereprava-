@@ -5368,7 +5368,7 @@ a.fx-menu-item.fx-gift {
 	position: absolute;
 	top: 30%;
 	left: 25%;
-	z-index: 40;
+	z-index: 1000000000;
 }
 
 .fx-rent-form {

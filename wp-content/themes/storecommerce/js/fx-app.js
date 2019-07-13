@@ -29,10 +29,12 @@ jQuery( function( $ ) {
 
     $(document).on('click', '.fx-rent-button', function () {
         $('.fx-product-rent-form').css('display', 'block');
+        $('#fx-Overlay').css('display', 'block');
     });
 
     $(document).on('click', '.close-popup', function () {
         $('.fx-product-rent-form').css('display', 'none');
+        $('#fx-Overlay').css('display', 'none');
     });
     
 

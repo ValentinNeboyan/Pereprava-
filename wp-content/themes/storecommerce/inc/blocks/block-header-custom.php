@@ -130,4 +130,5 @@
         </div>
 
     </div>
+    <div id="fx-Overlay" class="overlay">
 </div>
