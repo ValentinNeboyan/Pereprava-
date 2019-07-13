@@ -21,7 +21,8 @@
             
             <div class="fx-header-logo">
                 <a href="/" title="Перейти на Главная">
-                    <img src="http://www.pereprava.plus/wp-content/uploads/2019/07/logo.gif" alt="">
+<!--                    <img src="https://www.pereprava.plus/wp-content/uploads/2019/07/logo.gif" alt="">-->
+                    <img src="https://www.pereprava.plus//wp-content/themes/storecommerce/images/logo-title.gif" alt="">
                 </a>
 
             </div>

@@ -2,6 +2,7 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteRule ^apache-redirect-http-to-https\.html$ https://www.pererpava.plus/apache-redirect-http-to-https.html [R=301,L]
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f

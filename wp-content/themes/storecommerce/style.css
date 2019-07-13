@@ -5363,10 +5363,6 @@ a.fx-menu-item.fx-gift {
 	outline: unset;
 }
 
-.product-summary-wrapper {
-	margin-bottom: 50px;
-}
-
 .fx-product-rent-form {
 	display: none;
 	position: absolute;
@@ -5515,7 +5511,7 @@ a.facebook-icon {
 }
 
 #scroll-up {
-	bottom: 140px;
+	bottom: 80px;
 }
 
 /*defaults============================*/
@@ -5914,6 +5910,18 @@ body .select2-container .select2-selection--single{
 
 	.footer-phone, .footer-mail {
 		font-size: 20px;
+	}
+
+	#scroll-up {
+		bottom: 140px;
+	}
+
+	.product-summary-wrapper {
+		margin-bottom: 60px;
+	}
+
+	.fx-single-product-buttons {
+		bottom: -50px;		
 	}
 }
 
