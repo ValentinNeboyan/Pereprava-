@@ -152,7 +152,7 @@
                 </div>
                 <div class="social">
                     <!--					<span>Мы в соц сетях:</span>-->
-                    <a class="instagram-icon" href="#" target="_blank"></a>
+                    <a class="instagram-icon" href="https://instagram.com/perepravaplus?igshid=yfiei4ysn8zt" target="_blank"></a>
                     <a class="facebook-icon" href="https://www.facebook.com/groups/1482989298682239/?fref=ts" target="_blank"></a>
                 </div>
 

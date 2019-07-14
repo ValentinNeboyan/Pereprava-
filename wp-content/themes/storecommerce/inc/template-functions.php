@@ -660,7 +660,7 @@ if (!function_exists('custom_storecommerce_product_search_form')) :
                 <label class="screen-reader-text"
                        for="woocommerce-product-search-field"><?php esc_html_e('Search for:', 'storecommerce'); ?></label>
 
-                <button class="fx-search-button" type="submit" value=""><i class="fa fa-search" aria-hidden="true"></i><span>Поиск</span></button>
+                <button class="fx-search-button" type="submit" value=""><i class="fa fa-search" aria-hidden="true"></i><span>ПОИСК</span></button>
                 <input type="hidden" name="post_type" value="product"/>
 
             </div>

@@ -369,7 +369,8 @@ remove_action( 'woocommerce_external_add_to_cart', 'woocommerce_external_add_to_
 remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation', 10 );
 remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation_add_to_cart_button', 20 );
 
-
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
 add_action( 'woocommerce_after_single_product_summary', 'fx_displayProductInfo' );
 
