@@ -36,6 +36,17 @@ jQuery( function( $ ) {
         $('.fx-product-rent-form').css('display', 'none');
         $('#fx-Overlay').css('display', 'none');
     });
+
+    $(document).on('click', '.fx-location-button', function () {
+        return false;
+        $(this).addClass('active');
+        $('.fx-location-popup').css('display', 'flex');
+    });
+
+    $(document).on('click', '.fx-location-button.active', function () {
+        $(this).removeClass('active');
+        $('.fx-location-popup').css('display', 'none');
+    });
     
 
 

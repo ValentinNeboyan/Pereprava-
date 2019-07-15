@@ -152,6 +152,18 @@ if (1 == $enable_preloader):
     <div class="fx-product-rent-form">
         <?php echo do_shortcode('[contact-form-7 id="440" title="Арендовать"]')?>
     </div>
+<!--    <div class="fx-location-popup">-->
+<!--        --><?php
+//        echo rwmb_meta( 'map', array(
+//            'width'        => '640px',
+//            'height'       => '480px',
+//            'zoom'         => 14,
+//            'marker'       => true,
+//            'marker_title' => 'Кликни меня',
+//            'info_window'  => '<h3>Заголовок</h3><p>Контент</p>.',
+//        ) );
+//        ?>
+<!--    </div>-->
     <div id="content" class="site-content <?php echo esc_attr($container_class); ?>">
 
         <?php echo do_action('storecommerce_before_main_content'); ?>

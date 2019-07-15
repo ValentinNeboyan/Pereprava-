@@ -403,112 +403,75 @@ function hide_admin_notices() {
 
 wp_enqueue_script('newscript', get_template_directory_uri() . '/js/fx-app.js');
 
-require get_template_directory() . '/trueMetaBox.php';
 
-$options = array(
-    array( // первый метабокс
-        'id'	=>	'owner', // ID метабокса, а также префикс названия произвольного поля
-        'name'	=>	'Контакты владельца', // заголовок метабокса
-        'post'	=>	array('product'), // типы постов для которых нужно отобразить метабокс
-        'pos'	=>	'normal', // расположение, параметр $context функции add_meta_box()
-        'pri'	=>	'high', // приоритет, параметр $priority функции add_meta_box()
-        'cap'	=>	'edit_posts', // какие права должны быть у пользователя
-        'args'	=>	array(
-            array(
-                'id'			=>	'phone', // атрибуты name и id без префикса, например с префиксом будет owner
-                'title'			=>	'Телефон', // лейбл поля
-                'type'			=>	'text', // тип, в данном случае обычное текстовое поле
-                'placeholder'	=>	'', // атрибут placeholder
-                'desc'			=>	'Введите номер телефона', // что-то типа пояснения, подписи к полю
-                'cap'			=>	'edit_posts'
-            ),
-            array(
-                'id'			=>	'phone2',
-                'title'			=>	'Телефон 2',
-                'type'			=>	'text',
-                'placeholder'	=>	'',
-                'desc'			=>	'Введите номер телефона',
-                'cap'			=>	'edit_posts'
-            ),
-            array(
-                'id'			=>	'email',
-                'title'			=>	'Email',
-                'type'			=>	'text',
-                'placeholder'	=>	'',
-                'desc'			=>	'Введите электронную почту',
-                'cap'			=>	'edit_posts'
-            ),
-            array(
-                'id'			=>	'name',
-                'title'			=>	'Имя владельца',
-                'type'			=>	'text',
-                'placeholder'	=>	'',
-                'desc'			=>	'',
-                'cap'			=>	'edit_posts'
-            ),
-//            array(
-//                'id'			=>	'select1',
-//                'title'			=>	'Выпадающий список',
-//                'type'			=>	'select', // выпадающий список
-//                'desc'			=>	'тут тоже можно написать пояснение к полю, значения же задаются через ассоциативный массив',
-//                'cap'			=>	'edit_posts',
-//                'args'			=>	array('value_1' => 'Значение 1', '2' => 'Значение 2', 'Значение_3' => 'Значение 3' ) // элементы списка задаются через массив args, по типу value=>лейбл
-//            )
-        )
-    ),
-    array( // второй метабокс
-        'id'	=>	'product',
-        'name'	=>	'Youtube',
-        'post'	=>	array('product'),
-        'pos'	=>	'normal',
-        'pri'	=>	'high',
-        'cap'	=>	'edit_posts',
-        'args'	=>	array(
-            array(
-                'id'			=>	'youtube',
-                'title'			=>	'Введите ссылку на ролик в youtube',
-                'desc'			=>	'пример:"https://www.youtube.com/watch?v=1ugivNRYfjc"',
-                'type'			=>	'text',
-                'cap'			=>	'edit_posts'
-            )
-        )
-    ) ,
-//    array(
-//        'id'	=>	'location',
-//        'name'	=>	'Maps',
-//        'post'	=>	array('product'),
-//        'pos'	=>	'normal',
-//        'pri'	=>	'high',
-//        'cap'	=>	'edit_posts',
-//        'args'	=>	array(
-//            array(
-//                'id'   => 'address',
-//                'name' => 'Address',
-//                'type' => 'text',
-//                'cap'			=>	'edit_posts',
-//            ),
-//// Map field.
-//            array(
-//                'id'            => 'map',
-//                'name'          => 'Location',
-//                'type'          => 'map',
-//                'cap'			=>	'edit_posts',
-//
-//                // Локация по умолчанию: формат: 'latitude,longitude[,zoom]' (zoom не обязательно)
-//                'std'           => '-6.233406,-35.049906,15',
-//
-//                // ID текстового поля для адреса
-//                'address_field' => 'address',
-//
-//                // Google API ключ
-//                'api_key'       => 'XXXXXXXXX',
-//            ),
-//        )
-//    )
-);
+add_filter( 'rwmb_meta_boxes', 'prefix_meta_boxes' );
+function prefix_meta_boxes( $meta_boxes ) {
 
-foreach ($options as $option) {
-    $trueMetaBox = new trueMetaBox($option);
+    $meta_boxes[] = array(
+        'title'  => 'Дополнительные поля продукта',
+        'post_types' => 'product',
+        'fields' => array(
+            array(
+                'id'   => 'name',
+                'name' => 'Имя владельца',
+                'type' => 'text',
+            ),
+//            array(
+//                'id'      => 'gender',
+//                'name'    => 'Gender',
+//                'type'    => 'radio',
+//                'options' => array(
+//                    'm' => 'Male',
+//                    'f' => 'Female',
+//                ),
+//            ),
+            array(
+                'id'   => 'email',
+                'name' => 'Email',
+                'type' => 'email',
+            ),
+            array(
+                'id'   => 'phone',
+                'name' => 'Телефон',
+                'type' => 'text',
+                'clone'         => true,         // повторяемое поле
+//                'sort_clone'    => true,         // Можно ли сортировать клоны?
+                'clone_default' => true,         // Клонировать значение по умолчанию?
+                'add_button'    => 'Добавить номер', // Текст кнопки добавления клона.
+                'max_clone'     => 3,
+            ),
+            array(
+                'id' => 'product_youtube',
+                'type' => 'url',
+                'name' => esc_html__( 'Youtube'),
+                'desc' => esc_html__( 'Введите ссылку youtube, пример:(https://www.youtube.com/watch?v=tAGnKpE4NCI\ )'),
+                'size' => 100,
+            ),
+            array(
+                'id'   => 'address',
+                'name' => 'Адрес',
+                'type' => 'text',
+            ),
+// Map field.
+            array(
+                'id'            => 'map',
+                'name'          => 'Локация',
+                'type'          => 'map',
+
+                // Локация по умолчанию: формат: 'latitude,longitude[,zoom]' (zoom не обязательно)
+                'std'           => '47.8106211,35.0471084[,11.71]',
+
+                // ID текстового поля для адреса
+                'address_field' => 'address',
+
+                // Google API ключ
+                'api_key'       => 'XXXXXXXXX',
+            ),
+
+        ),
+    );
+
+    return $meta_boxes;
 }
 
 

@@ -5463,6 +5463,7 @@ a.fx-menu-item.fx-gift {
 	max-width: 100%;
 	min-width: 100%;
 	height: 90px;
+	max-height: 90px;
 	outline: unset;
 	border: 1px solid #63cfd4;
 	border-radius: 10px;
@@ -5522,6 +5523,21 @@ a.facebook-icon {
 
 .form-group.style-3-search.custom input {
 	color: #A1EAF1;
+}
+
+.fx-video-popup {
+	border-radius: 10px;
+	outline: unset;
+}
+
+.fx-location-popup {
+	position: absolute;
+	display: none;
+	top: 10%;
+	left: 25%;
+	width: 100%;
+	height: auto;
+	z-index: 9999999;
 }
 
 /*defaults============================*/
@@ -5716,6 +5732,11 @@ body .select2-container .select2-selection--single{
 
 	a.aft-wishlist-trigger {
 		color: #fff;
+	}
+
+	.fx-location-popup {
+		left: 9%;
+		top: 26%;
 	}
 
 }
@@ -5945,6 +5966,12 @@ body .select2-container .select2-selection--single{
 
 	.fx-single-product-buttons {
 		bottom: -50px;		
+	}
+
+
+	.fx-location-popup {
+		left: 0;
+		top: 6%;
 	}
 }
 

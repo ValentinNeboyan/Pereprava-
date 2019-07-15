@@ -50,13 +50,13 @@ class trueMetaBox {
                         <?php
                         break;
                     }
-                    case 'map':{ ?>
-                        <iframe src="https://www.google.com/maps/embed
-                        ?pb=!1m14!1m12!1m3!1d72083.2269139535!2d35.15310026593847!3d47.823919782999184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1563062510108!5m2!1sru!2sua"
-                                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        <?php
-                        break;
-                    }
+//                    case 'map':{ ?>
+<!--                        <iframe src="https://www.google.com/maps/embed-->
+<!--                        ?pb=!1m14!1m12!1m3!1d72083.2269139535!2d35.15310026593847!3d47.823919782999184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1563062510108!5m2!1sru!2sua"-->
+<!--                                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+<!--                        --><?php
+//                        break;
+//                    }
                     case 'select':{ ?>
                         <th scope="row"><label for="<?php echo $this->prefix .$param['id'] ?>"><?php echo $param['title'] ?></label></th>
                         <td>
